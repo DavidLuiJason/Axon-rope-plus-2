@@ -1,0 +1,643 @@
+[
+  {
+    "message": "hello",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "help",
+    "reply": {
+      "content": "Here is what I can run right now:\n\n1. Count text. Try: \"count words in hello brave new world\".\n2. Look up an English word or short phrase in the dictionary. Try: \"define bank\".\n3. Teach AXON what a word or phrase means. Try: \"remember that tally means count\".\n4. List the meanings you have taught AXON. Try: \"what have I taught you\".\n5. Forget a meaning you taught AXON. Try: \"forget tally\".\n6. Forget all meanings you taught AXON. Try: \"forget everything I taught you\".\n\nNeeds a screen or permission:\n- Open AXON Settings. Status: needs a screen. Settings is on the Settings screen; asking for it by chat is not yet implemented\n- Export the AXON source project. Status: needs a screen. export is on the Source screen; asking for it by chat is stage C3\n\nNot connected yet: your API keys; web search; other AI apps and sites; a local model; your local files; Make a collage from pictures with a style choice; Download a video from a pasted link; Turn a picture into a table (CSV) or code (SVG); Turn text into speech with a voice choice; Turn speech or audio into text; Write exact, unambiguous instructions for another AI tool.\n\nCapabilities with no chat action:\n- AXON Tools: The Text Tools child capability owns the registered chat action.\n- Interface Capture: shell only\n- Background Proof: proof only\n\nI will not guess at anything I cannot do.\n\nSource: AXON capability registry.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "what can you do",
+    "reply": {
+      "content": "Here is what I can run right now:\n\n1. Count text. Try: \"count words in hello brave new world\".\n2. Look up an English word or short phrase in the dictionary. Try: \"define bank\".\n3. Teach AXON what a word or phrase means. Try: \"remember that tally means count\".\n4. List the meanings you have taught AXON. Try: \"what have I taught you\".\n5. Forget a meaning you taught AXON. Try: \"forget tally\".\n6. Forget all meanings you taught AXON. Try: \"forget everything I taught you\".\n\nNeeds a screen or permission:\n- Open AXON Settings. Status: needs a screen. Settings is on the Settings screen; asking for it by chat is not yet implemented\n- Export the AXON source project. Status: needs a screen. export is on the Source screen; asking for it by chat is stage C3\n\nNot connected yet: your API keys; web search; other AI apps and sites; a local model; your local files; Make a collage from pictures with a style choice; Download a video from a pasted link; Turn a picture into a table (CSV) or code (SVG); Turn text into speech with a voice choice; Turn speech or audio into text; Write exact, unambiguous instructions for another AI tool.\n\nCapabilities with no chat action:\n- AXON Tools: The Text Tools child capability owns the registered chat action.\n- Interface Capture: shell only\n- Background Proof: proof only\n\nI will not guess at anything I cannot do.\n\nSource: AXON capability registry.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "what else can you do",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "what have I taught you",
+    "reply": {
+      "content": "You have not taught me anything yet. Try: \"remember that tally means count\".",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "remember that tally means count",
+    "reply": {
+      "content": "Saved. When you say \"tally\" I will read it as \"count\". This stays on this phone as your own data. It only helps if \"count\" is something I already understand; it cannot give me a tool I do not have. Say \"what have I taught you\" to see your list or \"forget tally\" to remove it.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "forget tally",
+    "reply": {
+      "content": "You have not taught me \"tally\", so there was nothing to forget.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "tell me a joke",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "make a collage",
+    "reply": {
+      "content": "Not built yet: Make a collage from pictures with a style choice. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "Not built yet: Make a collage from pictures with a style choice. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "download this video",
+    "reply": {
+      "content": "Not built yet: Download a video from a pasted link. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "Not built yet: Download a video from a pasted link. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "count the words in: git status",
+    "reply": {
+      "content": "That text has 2 words.\n\nWords: 2\nCharacters: 10 (9 without spaces)\nLetters: 9\nLines: 1\n\nNote: I found 1 code part and counted it exactly as written. I changed nothing.\n\nRan as task task-1: COMPLETED in 0 ms, from your exact input.",
+      "source": "local-rules",
+      "taskId": "task-1"
+    }
+  },
+  {
+    "message": "count words in hello brave new world",
+    "reply": {
+      "content": "That text has 4 words.\n\nWords: 4\nCharacters: 21 (18 without spaces)\nLetters: 18\nLines: 1\n\nRan as task task-1: COMPLETED in 0 ms, from your exact input.",
+      "source": "local-rules",
+      "taskId": "task-1"
+    }
+  },
+  {
+    "message": "define bank",
+    "reply": {
+      "source": "english-dictionary",
+      "content": "bank\n\n1. noun: sloping land (especially the slope beside a body of water)\n   Example: they pulled the canoe up on the bank\n2. noun: a financial institution that accepts deposits and channels the money into lending activities\n   Example: he cashed a check at the bank\n3. noun: a long ridge or pile\n   Example: a huge bank of earth\n4. noun: an arrangement of similar objects in a row or in tiers\n   Example: he operated a bank of switches\n5. noun: a supply or stock held in reserve for future use (especially in emergencies)\n\nSource: Open English WordNet 2025."
+    }
+  },
+  {
+    "message": "define index",
+    "reply": {
+      "source": "english-dictionary",
+      "content": "index\n\n1. noun: a numerical scale used to compare variables with one another or with some reference number\n2. noun: a number or ratio (a value on a scale of measurement) derived from a series of observed facts; can reveal relative changes as a function of time\n3. noun: a mathematical notation indicating the number of times a quantity is multiplied by itself\n4. noun: an alphabetical listing of names and topics along with page numbers where they are discussed\n5. noun: the finger next to the thumb\n\nSource: Open English WordNet 2025."
+    }
+  },
+  {
+    "message": "define the word bank",
+    "reply": {
+      "source": "english-dictionary",
+      "content": "bank\n\n1. noun: sloping land (especially the slope beside a body of water)\n   Example: they pulled the canoe up on the bank\n2. noun: a financial institution that accepts deposits and channels the money into lending activities\n   Example: he cashed a check at the bank\n3. noun: a long ridge or pile\n   Example: a huge bank of earth\n4. noun: an arrangement of similar objects in a row or in tiers\n   Example: he operated a bank of switches\n5. noun: a supply or stock held in reserve for future use (especially in emergencies)\n\nSource: Open English WordNet 2025."
+    }
+  },
+  {
+    "message": "meaning of selfie",
+    "reply": {
+      "source": "english-dictionary",
+      "content": "I do not have that word: selfie.\n\nSource: Open English WordNet 2025."
+    }
+  },
+  {
+    "message": "what does mice mean",
+    "reply": {
+      "source": "english-dictionary",
+      "content": "mouse\n\n1. noun: any of numerous small rodents typically resembling diminutive rats having pointed snouts and small ears on elongated bodies with slender usually hairless tails\n2. noun: a swollen bruise caused by a blow to the eye\n3. noun: person who is quiet or timid\n4. noun: a hand-operated electronic device that controls the coordinates of a cursor on your computer screen as you move it around on a pad; on the bottom of the device is a ball that rolls on the surface of the pad\n   Example: a mouse takes much more room than a trackball\n\nSource: Open English WordNet 2025."
+    }
+  },
+  {
+    "message": "define",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "What can you do?",
+    "reply": {
+      "content": "Here is what I can run right now:\n\n1. Count text. Try: \"count words in hello brave new world\".\n2. Look up an English word or short phrase in the dictionary. Try: \"define bank\".\n3. Teach AXON what a word or phrase means. Try: \"remember that tally means count\".\n4. List the meanings you have taught AXON. Try: \"what have I taught you\".\n5. Forget a meaning you taught AXON. Try: \"forget tally\".\n6. Forget all meanings you taught AXON. Try: \"forget everything I taught you\".\n\nNeeds a screen or permission:\n- Open AXON Settings. Status: needs a screen. Settings is on the Settings screen; asking for it by chat is not yet implemented\n- Export the AXON source project. Status: needs a screen. export is on the Source screen; asking for it by chat is stage C3\n\nNot connected yet: your API keys; web search; other AI apps and sites; a local model; your local files; Make a collage from pictures with a style choice; Download a video from a pasted link; Turn a picture into a table (CSV) or code (SVG); Turn text into speech with a voice choice; Turn speech or audio into text; Write exact, unambiguous instructions for another AI tool.\n\nCapabilities with no chat action:\n- AXON Tools: The Text Tools child capability owns the registered chat action.\n- Interface Capture: shell only\n- Background Proof: proof only\n\nI will not guess at anything I cannot do.\n\nSource: AXON capability registry.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "what tools do you have?",
+    "reply": {
+      "content": "Here is what I can run right now:\n\n1. Count text. Try: \"count words in hello brave new world\".\n2. Look up an English word or short phrase in the dictionary. Try: \"define bank\".\n3. Teach AXON what a word or phrase means. Try: \"remember that tally means count\".\n4. List the meanings you have taught AXON. Try: \"what have I taught you\".\n5. Forget a meaning you taught AXON. Try: \"forget tally\".\n6. Forget all meanings you taught AXON. Try: \"forget everything I taught you\".\n\nNeeds a screen or permission:\n- Open AXON Settings. Status: needs a screen. Settings is on the Settings screen; asking for it by chat is not yet implemented\n- Export the AXON source project. Status: needs a screen. export is on the Source screen; asking for it by chat is stage C3\n\nNot connected yet: your API keys; web search; other AI apps and sites; a local model; your local files; Make a collage from pictures with a style choice; Download a video from a pasted link; Turn a picture into a table (CSV) or code (SVG); Turn text into speech with a voice choice; Turn speech or audio into text; Write exact, unambiguous instructions for another AI tool.\n\nCapabilities with no chat action:\n- AXON Tools: The Text Tools child capability owns the registered chat action.\n- Interface Capture: shell only\n- Background Proof: proof only\n\nI will not guess at anything I cannot do.\n\nSource: AXON capability registry.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "can you make a collage?",
+    "reply": {
+      "content": "Not built yet: Make a collage from pictures with a style choice.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "could you count this random thing",
+    "reply": {
+      "content": "I have nothing registered for \"count this random thing\". Ask me \"what can you do\" to see everything I have registered.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "can you count words in hello brave new world",
+    "reply": {
+      "content": "That text has 4 words.\n\nWords: 4\nCharacters: 21 (18 without spaces)\nLetters: 18\nLines: 1\n\nRan as task task-1: COMPLETED in 0 ms, from your exact input.",
+      "source": "local-rules",
+      "taskId": "task-1"
+    }
+  },
+  {
+    "message": "can you open settings",
+    "reply": {
+      "content": "This needs a screen: Open AXON Settings. Settings is on the Settings screen; asking for it by chat is not yet implemented",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "please teleport a moon",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "could you remember that tally means count",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "how many characters are in this sentence?",
+    "reply": {
+      "content": "What text should I count? Paste or type it and send it. (Say \"cancel\" to stop.)",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "Good morning",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "count words",
+    "reply": {
+      "content": "What text should I count? Paste or type it and send it. (Say \"cancel\" to stop.)",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "cancel",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "some words here",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "late answer",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "count lines in x\ny",
+    "reply": {
+      "content": "That text has 2 lines.\n\nWords: 2\nCharacters: 3 (2 without spaces)\nLetters: 2\nLines: 2\n\nRan as task task-1: COMPLETED in 0 ms, from your exact input.",
+      "source": "local-rules",
+      "taskId": "task-1"
+    }
+  },
+  {
+    "message": "word count: a b",
+    "reply": {
+      "content": "That text has 2 words.\n\nWords: 2\nCharacters: 3 (2 without spaces)\nLetters: 2\nLines: 1\n\nRan as task task-1: COMPLETED in 0 ms, from your exact input.",
+      "source": "local-rules",
+      "taskId": "task-1"
+    }
+  },
+  {
+    "message": "count lines in single",
+    "reply": {
+      "content": "That text has 1 line.\n\nWords: 1\nCharacters: 6 (6 without spaces)\nLetters: 6\nLines: 1\n\nRan as task task-1: COMPLETED in 0 ms, from your exact input.",
+      "source": "local-rules",
+      "taskId": "task-1"
+    }
+  },
+  {
+    "message": "   ",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "anything",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "my answer",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "not an answer",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "tell me a story",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "could you make a collage?",
+    "reply": {
+      "content": "Not built yet: Make a collage from pictures with a style choice.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "describe axon ui",
+    "reply": {
+      "content": "The AXON interface is built upon a calm, minimal foundation designed to eliminate scattered dashboard clutter. It anchors three persistent interface zones:\n\n1. Fixed Top Controls: Menu trigger, anchored AXON brand selector, and contextual overflow.\n2. Independent Scrolling Viewport: Generous typography for clean discourse without heavy card-in-card containers.\n3. Anchored Adaptive Composer: Persistent bottom bubble holding the Chat / Web / Apps switch, audio controls, and unified voice/send transitions.",
+      "source": "foundation",
+      "leadParagraph": "The AXON interface is built upon a calm, minimal foundation designed to eliminate scattered dashboard clutter. It anchors three persistent interface zones:",
+      "planItems": [
+        "Fixed Top Controls: Menu trigger, anchored AXON brand selector, and contextual overflow.",
+        "Independent Scrolling Viewport: Generous typography for clean discourse without heavy card-in-card containers.",
+        "Anchored Adaptive Composer: Persistent bottom bubble holding the Chat / Web / Apps switch, audio controls, and unified voice/send transitions."
+      ],
+      "hasSources": true,
+      "suggestionPrompt": "Would you like to explore the navigation drawer structure or inspect the persistent composer tokens?"
+    }
+  },
+  {
+    "message": "count the terms in \"a b c\"",
+    "reply": {
+      "content": "That sounds like: Count text. Try: \"count words in hello brave new world\". The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "That sounds like: Count text. Try: \"count words in hello brave new world\". The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "remember that terms means words",
+    "reply": {
+      "content": "Saved. When you say \"terms\" I will read it as \"words\". This stays on this phone as your own data. It only helps if \"words\" is something I already understand; it cannot give me a tool I do not have. Say \"what have I taught you\" to see your list or \"forget terms\" to remove it.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "how many tokens are in \"x y\"",
+    "reply": {
+      "content": "That text has 2 words.\n\nWords: 2\nCharacters: 3 (2 without spaces)\nLetters: 2\nLines: 1\n\nRan as task task-1: COMPLETED in 0 ms, from your exact input.\nUnderstood by: flexible local matcher (Tier 1, offline, no model).\nMeaning used: \"tokens\" = \"words\".",
+      "source": "local-rules",
+      "taskId": "task-1"
+    }
+  },
+  {
+    "message": "count the words in \"a b c d\"",
+    "reply": {
+      "content": "That text has 4 words.\n\nWords: 4\nCharacters: 7 (4 without spaces)\nLetters: 4\nLines: 1\n\nRan as task task-1: COMPLETED in 0 ms, from your exact input.",
+      "source": "local-rules",
+      "taskId": "task-1"
+    }
+  },
+  {
+    "message": "remember that fox means dog",
+    "reply": {
+      "content": "Saved. When you say \"fox\" I will read it as \"dog\". This stays on this phone as your own data. It only helps if \"dog\" is something I already understand; it cannot give me a tool I do not have. Say \"what have I taught you\" to see your list or \"forget fox\" to remove it.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "count the words in the quick fox",
+    "reply": {
+      "content": "That text has 3 words.\n\nWords: 3\nCharacters: 13 (11 without spaces)\nLetters: 11\nLines: 1\n\nRan as task task-1: COMPLETED in 0 ms, from your exact input.",
+      "source": "local-rules",
+      "taskId": "task-1"
+    }
+  },
+  {
+    "message": "enumerate the tokens in the quick fox",
+    "reply": {
+      "content": "That text has 3 words.\n\nWords: 3\nCharacters: 13 (11 without spaces)\nLetters: 11\nLines: 1\n\nRan as task task-1: COMPLETED in 0 ms, from your exact input.\nUnderstood by: flexible local matcher (Tier 1, offline, no model).\nMeaning used: \"enumerate\" = \"count\", \"tokens\" = \"words\".",
+      "source": "local-rules",
+      "taskId": "task-1"
+    }
+  },
+  {
+    "message": "enumerate the tokens in \"fox fox\"",
+    "reply": {
+      "content": "That text has 2 words.\n\nWords: 2\nCharacters: 7 (6 without spaces)\nLetters: 6\nLines: 1\n\nRan as task task-1: COMPLETED in 0 ms, from your exact input.\nUnderstood by: flexible local matcher (Tier 1, offline, no model).\nMeaning used: \"enumerate\" = \"count\", \"tokens\" = \"words\".",
+      "source": "local-rules",
+      "taskId": "task-1"
+    }
+  },
+  {
+    "message": "forget fox",
+    "reply": {
+      "content": "You have not taught me \"fox\", so there was nothing to forget.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "forget tokens",
+    "reply": {
+      "content": "\"tokens\" is one of my built-in meanings, not something you taught me, so I cannot remove it.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "forget banana",
+    "reply": {
+      "content": "You have not taught me \"banana\", so there was nothing to forget.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "remember that yes means count",
+    "reply": {
+      "content": "I did not save that. \"yes\" steers our conversation, so I will not redefine it.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "forget everything I taught you",
+    "reply": {
+      "content": "You had not taught me anything, so nothing was removed.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "count the words",
+    "reply": {
+      "content": "What text should I count? Paste or type it and send it. (Say \"cancel\" to stop.)",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "remember that a means b",
+    "reply": {
+      "content": "Saved. When you say \"a\" I will read it as \"b\". This stays on this phone as your own data. It only helps if \"b\" is something I already understand; it cannot give me a tool I do not have. Say \"what have I taught you\" to see your list or \"forget a\" to remove it.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "remember that talley means count",
+    "reply": {
+      "content": "Saved. When you say \"talley\" I will read it as \"count\". This stays on this phone as your own data. It only helps if \"count\" is something I already understand; it cannot give me a tool I do not have. Say \"what have I taught you\" to see your list or \"forget talley\" to remove it.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "talley the words",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "no",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "how many words do I have",
+    "reply": {
+      "content": "Did you mean: count the words in some text? Say \"yes\" to go ahead or \"no\" to cancel. Nothing has been run.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "remember that do i have means are in this",
+    "reply": {
+      "content": "Saved. When you say \"do i have\" I will read it as \"are in this\". This stays on this phone as your own data. It only helps if \"are in this\" is something I already understand; it cannot give me a tool I do not have. Say \"what have I taught you\" to see your list or \"forget do i have\" to remove it.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "remember that zzz means count",
+    "reply": {
+      "content": "Saved. When you say \"zzz\" I will read it as \"count\". This stays on this phone as your own data. It only helps if \"count\" is something I already understand; it cannot give me a tool I do not have. Say \"what have I taught you\" to see your list or \"forget zzz\" to remove it.",
+      "source": "local-rules"
+    }
+  },
+  {
+    "message": "zzz the words in \"a b c\"",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "count the terms in \"a b\"",
+    "reply": {
+      "content": "That sounds like: Count text. Try: \"count words in hello brave new world\". The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "That sounds like: Count text. Try: \"count words in hello brave new world\". The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "define qzxvbn",
+    "reply": {
+      "source": "english-dictionary",
+      "content": "I do not have that word: qzxvbn.\n\nSource: Open English WordNet 2025."
+    }
+  },
+  {
+    "message": "count words in one two three",
+    "reply": {
+      "content": "That text has 3 words.\n\nWords: 3\nCharacters: 13 (11 without spaces)\nLetters: 11\nLines: 1\n\nRan as task task-1: COMPLETED in 0 ms, from your exact input.",
+      "source": "local-rules",
+      "taskId": "task-1"
+    }
+  },
+  {
+    "message": "one",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "two",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "question in A",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "question in B",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "my words",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "reference question",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "x",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "a",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "b",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "q",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  },
+  {
+    "message": "s",
+    "reply": {
+      "content": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "source": "foundation",
+      "leadParagraph": "I do not have a way to do that, and I will not guess. Ask me \"what can you do\" to see everything I have registered. The rest of my understanding is still being built.",
+      "hasSources": false
+    }
+  }
+]

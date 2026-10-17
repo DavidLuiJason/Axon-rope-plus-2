@@ -1,0 +1,709 @@
+{
+ "version": 2,
+ "seal": "159915b0448d204300101802aa89e5b7ac40cb987f5f1dad682e031be3e888f8",
+ "dictionaries": [
+  "public/dictionary/en"
+ ],
+ "files": {
+  ".env.example": {
+   "bytes": 445
+  },
+  ".github/workflows/android-debug.yml": {
+   "bytes": 6144
+  },
+  ".github/workflows/auto-unpack.yml": {
+   "bytes": 1651
+  },
+  ".gitignore": {
+   "bytes": 380
+  },
+  ".nvmrc": {
+   "bytes": 3
+  },
+  "AXON_ROADMAP.md": {
+   "bytes": 153619
+  },
+  "BUILD.md": {
+   "bytes": 3492
+  },
+  "EVIDENCE.md": {
+   "bytes": 814
+  },
+  "README.md": {
+   "bytes": 14
+  },
+  "STAGE6_1_REPORT.md": {
+   "bytes": 6948
+  },
+  "STAGE6_2A_REPORT.md": {
+   "bytes": 7635
+  },
+  "STAGE6_2B_REPORT.md": {
+   "bytes": 11521
+  },
+  "STAGE6_2C_REPORT.md": {
+   "bytes": 8404
+  },
+  "STAGE6_2D_REPORT.md": {
+   "bytes": 6371
+  },
+  "STAGE6_2E_REPORT.md": {
+   "bytes": 2076
+  },
+  "STAGE6_REPORT.md": {
+   "bytes": 3390
+  },
+  "STAGE6_Z0_REPORT.md": {
+   "bytes": 12561
+  },
+  "STAGE6_Z2_REPORT.md": {
+   "bytes": 3315
+  },
+  "android-overlay/app/src/main/java/com/axon/app/MainActivity.java": {
+   "bytes": 460
+  },
+  "android-overlay/app/src/main/java/com/axon/app/background/BackgroundJobService.java": {
+   "bytes": 32281
+  },
+  "android-overlay/app/src/main/java/com/axon/app/background/BackgroundJobsPlugin.java": {
+   "bytes": 6869
+  },
+  "android-overlay/app/src/main/java/com/axon/app/filesaver/FileSaverPlugin.java": {
+   "bytes": 8323
+  },
+  "android-overlay/app/src/main/res/drawable/ic_notification.xml": {
+   "bytes": 407
+  },
+  "android-overlay/manifest-additions.xml": {
+   "bytes": 1564
+  },
+  "capacitor.config.json": {
+   "bytes": 236
+  },
+  "docs/DEPLOYMENT_GUIDE.md": {
+   "bytes": 3050
+  },
+  "docs/G3_PACK_DESIGN.md": {
+   "bytes": 2261
+  },
+  "docs/G5A_REGISTRY_VERDICT.md": {
+   "bytes": 2563
+  },
+  "docs/PHASE_G_LOCAL_EVIDENCE.md": {
+   "bytes": 4380
+  },
+  "docs/ROADMAP.md": {
+   "bytes": 37545
+  },
+  "docs/archive/AXON_ROADMAP_V15_1.md": {
+   "bytes": 303060
+  },
+  "index.html": {
+   "bytes": 1290
+  },
+  "metadata.json": {
+   "bytes": 238
+  },
+  "package.json": {
+   "bytes": 1767
+  },
+  "public/dictionary/en/ATTRIBUTION.txt": {
+   "bytes": 532,
+   "sha256": "42145c7bd50fa53436a6a2bbd28d175a88026217680385491d4973234b16342f"
+  },
+  "public/dictionary/en/licenses/LICENSE.md": {
+   "bytes": 19863,
+   "sha256": "672cc8b5663e8dc74c4b07a9dcf477193853575b119908fd3dc0aeeb60a9dbbb"
+  },
+  "public/dictionary/en/licenses/WNDB_License.txt": {
+   "bytes": 1740,
+   "sha256": "df30ec18fbabcdaf031b79ea026d3e6b959010cffe6dd7be9ac137822175b904"
+  },
+  "public/dictionary/en/manifest.json": {
+   "bytes": 412798,
+   "sha256": "40ae0a6215cdafc7cda77fc01ea3ecd3dfa697679e4850ebbd920c1d3c24eaf5"
+  },
+  "scripts/apply-android-overlay.sh": {
+   "bytes": 3573
+  },
+  "scripts/device-test-background-proof.md": {
+   "bytes": 2040
+  },
+  "scripts/test-apply-overlay.sh": {
+   "bytes": 11709
+  },
+  "src/App.tsx": {
+   "bytes": 9198
+  },
+  "src/background/elapsedFormat.ts": {
+   "bytes": 1203
+  },
+  "src/background/index.ts": {
+   "bytes": 656
+  },
+  "src/background/nativeBridge.ts": {
+   "bytes": 4315
+  },
+  "src/background/types.ts": {
+   "bytes": 2367
+  },
+  "src/background/verdict.ts": {
+   "bytes": 7534
+  },
+  "src/background/webFallbackAdapter.ts": {
+   "bytes": 5695
+  },
+  "src/brain/abilities.ts": {
+   "bytes": 4310
+  },
+  "src/brain/asking.ts": {
+   "bytes": 5871
+  },
+  "src/brain/brain.ts": {
+   "bytes": 2073
+  },
+  "src/brain/dictionary/dictionary.ts": {
+   "bytes": 10665
+  },
+  "src/brain/dictionary/fetchReader.ts": {
+   "bytes": 1119
+  },
+  "src/brain/dictionary/index.ts": {
+   "bytes": 202
+  },
+  "src/brain/dictionary/irregulars.ts": {
+   "bytes": 6970
+  },
+  "src/brain/dictionary/keys.ts": {
+   "bytes": 627
+  },
+  "src/brain/dictionary/morphology.ts": {
+   "bytes": 3285
+  },
+  "src/brain/dictionary/packReader.ts": {
+   "bytes": 4086
+  },
+  "src/brain/dictionary/pickHeadword.ts": {
+   "bytes": 2375
+  },
+  "src/brain/dictionary/types.ts": {
+   "bytes": 1903
+  },
+  "src/brain/dictionary/wordBook.ts": {
+   "bytes": 8052
+  },
+  "src/brain/dictionaryAccess.ts": {
+   "bytes": 792
+  },
+  "src/brain/followUpWords.ts": {
+   "bytes": 249
+  },
+  "src/brain/foundation.ts": {
+   "bytes": 2841
+  },
+  "src/brain/index.ts": {
+   "bytes": 1336
+  },
+  "src/brain/knowledge/dictionaryProvider.ts": {
+   "bytes": 3018
+  },
+  "src/brain/knowledge/dictionarySlot.ts": {
+   "bytes": 2824
+  },
+  "src/brain/knowledge/slot.ts": {
+   "bytes": 3286
+  },
+  "src/brain/lexicon.ts": {
+   "bytes": 10961
+  },
+  "src/brain/localRules.ts": {
+   "bytes": 10096
+  },
+  "src/brain/matcher.ts": {
+   "bytes": 1999
+  },
+  "src/brain/mind/analysis/analyze.ts": {
+   "bytes": 10763
+  },
+  "src/brain/mind/analysis/needs.ts": {
+   "bytes": 1201
+  },
+  "src/brain/mind/index.ts": {
+   "bytes": 379
+  },
+  "src/brain/mind/legacy.ts": {
+   "bytes": 1914
+  },
+  "src/brain/mind/pipeline.ts": {
+   "bytes": 2040
+  },
+  "src/brain/mind/stages.ts": {
+   "bytes": 6837
+  },
+  "src/brain/mind/types.ts": {
+   "bytes": 1210
+  },
+  "src/brain/symbols/codeRegions.ts": {
+   "bytes": 6781
+  },
+  "src/brain/symbols/protect.ts": {
+   "bytes": 1970
+  },
+  "src/brain/symbols/readPunctuation.ts": {
+   "bytes": 1744
+  },
+  "src/brain/symbols/symbolRoles.ts": {
+   "bytes": 2897
+  },
+  "src/brain/textCountCommand.ts": {
+   "bytes": 4447
+  },
+  "src/brain/textCountIntent.ts": {
+   "bytes": 7680
+  },
+  "src/brain/types.ts": {
+   "bytes": 3074
+  },
+  "src/capabilities/index.ts": {
+   "bytes": 271
+  },
+  "src/capabilities/registerAxonSource.ts": {
+   "bytes": 898
+  },
+  "src/capabilities/registerAxonTools.ts": {
+   "bytes": 1366
+  },
+  "src/capabilities/registerBackgroundProof.ts": {
+   "bytes": 863
+  },
+  "src/capabilities/registerDictionary.ts": {
+   "bytes": 893
+  },
+  "src/capabilities/registerInterfaceCapture.ts": {
+   "bytes": 1235
+  },
+  "src/capabilities/registerPlanned.ts": {
+   "bytes": 1167
+  },
+  "src/capabilities/registerPlannedMedia.ts": {
+   "bytes": 1515
+  },
+  "src/capabilities/registerSettings.ts": {
+   "bytes": 767
+  },
+  "src/capabilities/registerTaughtMeanings.ts": {
+   "bytes": 1554
+  },
+  "src/capabilities/registry.ts": {
+   "bytes": 2430
+  },
+  "src/capabilities/types.ts": {
+   "bytes": 1706
+  },
+  "src/components/ActiveConversation.tsx": {
+   "bytes": 8485
+  },
+  "src/components/AxonBuildScreen.tsx": {
+   "bytes": 12913
+  },
+  "src/components/AxonLogo.jsx": {
+   "bytes": 49399
+  },
+  "src/components/AxonSourceScreen.tsx": {
+   "bytes": 31795
+  },
+  "src/components/AxonToolsScreen.tsx": {
+   "bytes": 10976
+  },
+  "src/components/BackgroundProofScreen.tsx": {
+   "bytes": 16599
+  },
+  "src/components/Composer.tsx": {
+   "bytes": 11755
+  },
+  "src/components/ConverterScreen.tsx": {
+   "bytes": 20002
+  },
+  "src/components/CrashLogModal.tsx": {
+   "bytes": 6254
+  },
+  "src/components/CreditsModal.tsx": {
+   "bytes": 3868
+  },
+  "src/components/DesignTokensModal.tsx": {
+   "bytes": 6859
+  },
+  "src/components/DictionaryScreen.tsx": {
+   "bytes": 26768
+  },
+  "src/components/ErrorBoundary.tsx": {
+   "bytes": 3412
+  },
+  "src/components/InterfaceCaptureScreen.tsx": {
+   "bytes": 32709
+  },
+  "src/components/NavigationDrawer.tsx": {
+   "bytes": 9501
+  },
+  "src/components/RootBoundary.tsx": {
+   "bytes": 2390
+  },
+  "src/components/ScreenGuard.tsx": {
+   "bytes": 1518
+  },
+  "src/components/ScreenHeader.tsx": {
+   "bytes": 4880
+  },
+  "src/components/SettingsModal.tsx": {
+   "bytes": 7442
+  },
+  "src/components/TextCounterScreen.tsx": {
+   "bytes": 5769
+  },
+  "src/components/TopBar.tsx": {
+   "bytes": 7075
+  },
+  "src/components/WelcomeState.tsx": {
+   "bytes": 1254
+  },
+  "src/components/buildDetails.ts": {
+   "bytes": 3222
+  },
+  "src/components/editors/AudioEditorScreen.tsx": {
+   "bytes": 1852
+  },
+  "src/components/editors/ImageEditorScreen.tsx": {
+   "bytes": 1852
+  },
+  "src/components/editors/VideoEditorScreen.tsx": {
+   "bytes": 1852
+  },
+  "src/crash/crashLog.ts": {
+   "bytes": 8710
+  },
+  "src/index.css": {
+   "bytes": 661
+  },
+  "src/interfaces/index.ts": {
+   "bytes": 437
+  },
+  "src/interfaces/registerAxonSource.ts": {
+   "bytes": 986
+  },
+  "src/interfaces/registerAxonTools.ts": {
+   "bytes": 1573
+  },
+  "src/interfaces/registerBackgroundProof.ts": {
+   "bytes": 1015
+  },
+  "src/interfaces/registerInterfaceCapture.ts": {
+   "bytes": 1037
+  },
+  "src/interfaces/registerSettings.ts": {
+   "bytes": 998
+  },
+  "src/interfaces/registry.ts": {
+   "bytes": 4306
+  },
+  "src/interfaces/types.ts": {
+   "bytes": 2140
+  },
+  "src/kernel/actionSchema.ts": {
+   "bytes": 1717
+  },
+  "src/kernel/axonEngine.ts": {
+   "bytes": 741
+  },
+  "src/kernel/deviceProfile.ts": {
+   "bytes": 6311
+  },
+  "src/kernel/index.ts": {
+   "bytes": 820
+  },
+  "src/kernel/taskEngine.ts": {
+   "bytes": 12892
+  },
+  "src/kernel/textCount.ts": {
+   "bytes": 1911
+  },
+  "src/kernel/types.ts": {
+   "bytes": 2952
+  },
+  "src/main.tsx": {
+   "bytes": 2404
+  },
+  "src/services/axonBrainInterface.ts": {
+   "bytes": 1475
+  },
+  "src/services/exportPool.ts": {
+   "bytes": 1256
+  },
+  "src/services/fileSaverPlugin.ts": {
+   "bytes": 806
+  },
+  "src/services/saveFile.ts": {
+   "bytes": 4441
+  },
+  "src/services/sourceService.ts": {
+   "bytes": 9175
+  },
+  "src/state/AxonStateContext.tsx": {
+   "bytes": 10777
+  },
+  "src/state/axonState.ts": {
+   "bytes": 4840
+  },
+  "src/state/buildConfirmations.ts": {
+   "bytes": 1774
+  },
+  "src/state/storage.ts": {
+   "bytes": 6314
+  },
+  "src/tokens/designTokens.ts": {
+   "bytes": 2345
+  },
+  "src/tools/converter/convert.ts": {
+   "bytes": 2768
+  },
+  "src/tools/converter/index.ts": {
+   "bytes": 382
+  },
+  "src/tools/converter/kinds.ts": {
+   "bytes": 1368
+  },
+  "src/tools/engines/create/encodeDecode.ts": {
+   "bytes": 5840
+  },
+  "src/tools/engines/create/hashChecksum.ts": {
+   "bytes": 3412
+  },
+  "src/tools/engines/create/index.ts": {
+   "bytes": 502
+  },
+  "src/tools/engines/create/passwordGenerator.ts": {
+   "bytes": 3272
+  },
+  "src/tools/engines/create/randomPicker.ts": {
+   "bytes": 5046
+  },
+  "src/tools/engines/numbers/baseConvert.ts": {
+   "bytes": 1319
+  },
+  "src/tools/engines/numbers/calculator.ts": {
+   "bytes": 6898
+  },
+  "src/tools/engines/numbers/index.ts": {
+   "bytes": 572
+  },
+  "src/tools/engines/numbers/numberToWords.ts": {
+   "bytes": 3055
+  },
+  "src/tools/engines/numbers/percentage.ts": {
+   "bytes": 2261
+  },
+  "src/tools/engines/numbers/unitConvert.ts": {
+   "bytes": 4063
+  },
+  "src/tools/engines/text/caseConvert.ts": {
+   "bytes": 2733
+  },
+  "src/tools/engines/text/findReplace.ts": {
+   "bytes": 3231
+  },
+  "src/tools/engines/text/index.ts": {
+   "bytes": 958
+  },
+  "src/tools/engines/text/sortLines.ts": {
+   "bytes": 3852
+  },
+  "src/tools/engines/text/textCleaner.ts": {
+   "bytes": 2799
+  },
+  "src/tools/engines/text/textCompare.ts": {
+   "bytes": 4372
+  },
+  "src/tools/engines/time/dateCalc.ts": {
+   "bytes": 7079
+  },
+  "src/tools/engines/time/index.ts": {
+   "bytes": 107
+  },
+  "src/tools/engines/time/stopwatch.ts": {
+   "bytes": 3258
+  },
+  "src/tools/engines/time/tally.ts": {
+   "bytes": 4409
+  },
+  "src/tools/engines/time/timer.ts": {
+   "bytes": 4131
+  },
+  "src/tools/imageEdit/cropResize.ts": {
+   "bytes": 3603
+  },
+  "src/tools/imageEdit/history.ts": {
+   "bytes": 2036
+  },
+  "src/tools/imageEdit/pictureSet.ts": {
+   "bytes": 4834
+  },
+  "src/tools/textCounterRun.ts": {
+   "bytes": 2305
+  },
+  "src/tools/toolCatalog.ts": {
+   "bytes": 6535
+  },
+  "src/types/index.ts": {
+   "bytes": 834
+  },
+  "tests/analysis.test.ts": {
+   "bytes": 9896
+  },
+  "tests/askChoices.test.ts": {
+   "bytes": 6407
+  },
+  "tests/autoUnpack.test.py": {
+   "bytes": 2008
+  },
+  "tests/brain.test.ts": {
+   "bytes": 14470
+  },
+  "tests/brainBoundary.test.ts": {
+   "bytes": 2470
+  },
+  "tests/brainGolden.test.ts": {
+   "bytes": 4642
+  },
+  "tests/capabilityTruth.test.ts": {
+   "bytes": 8399
+  },
+  "tests/chatSession.test.ts": {
+   "bytes": 6145
+  },
+  "tests/crash.test.ts": {
+   "bytes": 17237
+  },
+  "tests/cropResize.test.ts": {
+   "bytes": 5924
+  },
+  "tests/dictionary.test.ts": {
+   "bytes": 11386
+  },
+  "tests/dictionaryEnumerate.test.ts": {
+   "bytes": 2859
+  },
+  "tests/dictionaryPolish.test.ts": {
+   "bytes": 2359
+  },
+  "tests/dictionaryProvider.test.ts": {
+   "bytes": 9073
+  },
+  "tests/dictionarySlot.test.ts": {
+   "bytes": 2636
+  },
+  "tests/elapsedFormat.test.ts": {
+   "bytes": 1054
+  },
+  "tests/exportPool.test.ts": {
+   "bytes": 2388
+  },
+  "tests/fixtures/analysis100.json": {
+   "bytes": 7006
+  },
+  "tests/fixtures/brainGolden.json": {
+   "bytes": 36597
+  },
+  "tests/fixtures/sym1-baseline.json": {
+   "bytes": 12806
+  },
+  "tests/fixtures/sym1-written-set.json": {
+   "bytes": 8593
+  },
+  "tests/imageEditHistory.test.ts": {
+   "bytes": 3551
+  },
+  "tests/kernel.test.ts": {
+   "bytes": 22288
+  },
+  "tests/knowledgeSlot.test.ts": {
+   "bytes": 3036
+  },
+  "tests/lexicon.test.ts": {
+   "bytes": 18498
+  },
+  "tests/matcher.test.ts": {
+   "bytes": 13235
+  },
+  "tests/mindPipeline.test.ts": {
+   "bytes": 8737
+  },
+  "tests/packDictionary.test.py": {
+   "bytes": 496
+  },
+  "tests/pickHeadword.test.ts": {
+   "bytes": 5483
+  },
+  "tests/pictureSet.test.ts": {
+   "bytes": 5465
+  },
+  "tests/roadmapSize.test.ts": {
+   "bytes": 1714
+  },
+  "tests/snapshot.test.mjs": {
+   "bytes": 3137
+  },
+  "tests/symbols.test.ts": {
+   "bytes": 5308
+  },
+  "tests/tools.test.ts": {
+   "bytes": 13833
+  },
+  "tests/toolsConverter.test.ts": {
+   "bytes": 5193
+  },
+  "tests/toolsCreate.test.ts": {
+   "bytes": 10591
+  },
+  "tests/toolsNumbers.test.ts": {
+   "bytes": 7811
+  },
+  "tests/toolsText.test.ts": {
+   "bytes": 8491
+  },
+  "tests/toolsTime.test.ts": {
+   "bytes": 14927
+  },
+  "tests/verdict.test.ts": {
+   "bytes": 7351
+  },
+  "tests/wordBook.test.ts": {
+   "bytes": 4483
+  },
+  "tools/auto-unpack.sh": {
+   "bytes": 3453
+  },
+  "tools/compare-dirs.mjs": {
+   "bytes": 2500
+  },
+  "tools/guard.mjs": {
+   "bytes": 9554
+  },
+  "tools/pack_dictionary.py": {
+   "bytes": 3942
+  },
+  "tools/snapshot.mjs": {
+   "bytes": 7267
+  },
+  "tools/verify_pack_dictionary.py": {
+   "bytes": 1971
+  },
+  "tools/zip-reader.mjs": {
+   "bytes": 2603
+  },
+  "tsconfig.json": {
+   "bytes": 538
+  },
+  "vite.config.ts": {
+   "bytes": 1426
+  }
+ }
+}

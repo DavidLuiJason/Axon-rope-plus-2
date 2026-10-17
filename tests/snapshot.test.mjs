@@ -1,0 +1,47 @@
+// AXON G2 independent fixture tests. No npm install, browser, or dictionary download needed.
+import { mkdtempSync, mkdirSync, writeFileSync, copyFileSync, readFileSync, rmSync, unlinkSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join, dirname } from 'node:path';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+import { strict as assert } from 'node:assert';
+const repo = dirname(dirname(fileURLToPath(import.meta.url)));
+const temp = mkdtempSync(join(tmpdir(), 'axon-snapshot-test-'));
+let checks = 0;
+const put = (p, bytes) => { const full = join(temp, p); mkdirSync(dirname(full), { recursive: true }); writeFileSync(full, bytes); };
+const run = (script, args = []) => spawnSync(process.execPath, [join(temp, 'tools', script), ...args], { cwd: temp, encoding: 'utf8' });
+const ok = (condition, label) => { checks++; assert.ok(condition, label); };
+try {
+  for (const file of ['snapshot.mjs', 'zip-reader.mjs', 'compare-dirs.mjs']) put(`tools/${file}`, readFileSync(join(repo, 'tools', file)));
+  put('package.json', '{"name":"fixture","type":"module"}\n');
+  put('.gitignore', 'dist/\n');
+  put('.env.example', 'PUBLIC_TEMPLATE=true\n');
+  put('.env.local', 'PRIVATE_SECRET=NEVER_EXPORT\n');
+  put('.github/workflows/android-debug.yml', 'name: fixture\n');
+  put('src/source.ts', 'export const message = "hello";\n');
+  put('assets/picture.bin', Buffer.from([0, 255, 1, 2, 3]));
+  put('public/dictionary/en/ATTRIBUTION.txt', 'Princeton\n');
+  put('public/dictionary/en/core/a.json', '{"a":1}\n');
+  put('dist/ignored.js', 'ignored');
+  for (const f of ['bun.lock', 'bun.lockb', 'yarn.lock', 'pnpm-lock.yaml', 'Thumbs.db']) put(f, 'tool-made');
+  put('package-lock.json', '{"lockfileVersion":3}\n');
+  put('stray-unknown.tool', 'unknown file');
+  ok(run('snapshot.mjs').status === 0, 'build snapshot');
+  ok(run('snapshot.mjs', ['--check']).status === 0, 'verify snapshot');
+  const manifest = JSON.parse(readFileSync(join(temp, 'public/_axon-source/manifest.json'), 'utf8'));
+  ok(manifest.zones.Z2.files === 2 && manifest.files.some((f) => f.path === '.github/workflows/android-debug.yml'), 'zones include dictionary and dot folders');
+  ok(!manifest.files.some((f) => f.path === '.env.local' || f.path.startsWith('dist/')), 'secret and build output excluded');
+  ok(!manifest.files.some((f) => ['bun.lock', 'bun.lockb', 'yarn.lock', 'pnpm-lock.yaml', 'Thumbs.db'].includes(f.path)), 'tool-made files left out');
+  ok(manifest.files.some((f) => f.path === 'package-lock.json') && manifest.files.some((f) => f.path === 'stray-unknown.tool'), 'package-lock.json and unknown files still included');
+  ok(run('compare-dirs.mjs', ['.', 'public/_axon-source/source.zip', '--ignore', 'public/dictionary/']).status === 0, 'Z1 binary-safe roundtrip');
+  put('src/source.ts', 'export const message = "tampered";\n');
+  ok(run('snapshot.mjs', ['--check']).status !== 0, 'changed source byte detected');
+  ok(run('compare-dirs.mjs', ['.', 'public/_axon-source/source.zip', '--ignore', 'public/dictionary/']).status !== 0, 'compare detects changed source');
+  ok(run('snapshot.mjs').status === 0, 'rebuild after source edit');
+  put('public/dictionary/en/core/a.json', '{"a":2}\n');
+  ok(run('snapshot.mjs', ['--check']).status !== 0, 'changed dictionary byte detected');
+  ok(run('snapshot.mjs').status === 0, 'rebuild after dictionary edit');
+  unlinkSync(join(temp, 'public/dictionary/en/ATTRIBUTION.txt'));
+  ok(run('snapshot.mjs', ['--check']).status !== 0, 'missing dictionary file detected');
+  console.log(`SNAPSHOT TEST OK: ${checks} independent checks`);
+} finally { rmSync(temp, { recursive: true, force: true }); }

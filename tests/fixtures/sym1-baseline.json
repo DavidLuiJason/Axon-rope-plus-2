@@ -1,0 +1,458 @@
+{
+ "note": "Recorded by the Director from the ORIGINAL code (repository zip Axon-dict-v1-test-main, before any N6 change): for each message, understandTextCount (u), TEXT_COUNT_COMMAND.match (mt) and, when match gives text, TEXT_COUNT_COMMAND.describe(countText(text), input) (d). Never edit.",
+ "results": {
+  "Count the words in: I can't believe it's already 5:30 (time flies!), but \"better late than never\" is what they say.": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "better late than never",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": {
+    "input": {
+     "text": "I can't believe it's already 5:30 (time flies!), but \"better late than never\" is what they say.",
+     "unit": "words"
+    }
+   },
+   "d": "That text has 17 words.\n\nWords: 17\nCharacters: 95 (79 without spaces)\nLetters: 66\nLines: 1"
+  },
+  "I can't believe it's already 5:30 (time flies!), but \"better late than never\" is what they say.\nHow many words is that?": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "better late than never",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": null,
+   "d": null
+  },
+  "Count the words in: Dear John, thank you for your letter; I'll reply on Monday. Regards, Anna": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "Dear John, thank you for your letter; I'll reply on Monday. Regards, Anna",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": {
+    "input": {
+     "text": "Dear John, thank you for your letter; I'll reply on Monday. Regards, Anna",
+     "unit": "words"
+    }
+   },
+   "d": "That text has 13 words.\n\nWords: 13\nCharacters: 73 (61 without spaces)\nLetters: 56\nLines: 1"
+  },
+  "Dear John, thank you for your letter; I'll reply on Monday. Regards, Anna\nHow many words is that?": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "Dear John, thank you for your letter; I'll reply on Monday. Regards, Anna",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": null,
+   "d": null
+  },
+  "Count the words in: The price is $3.50 per kg - not bad, right? Compare it with 4.25 elsewhere.": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "The price is $3.50 per kg - not bad, right? Compare it with 4.25 elsewhere.",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": {
+    "input": {
+     "text": "The price is $3.50 per kg - not bad, right? Compare it with 4.25 elsewhere.",
+     "unit": "words"
+    }
+   },
+   "d": "That text has 15 words.\n\nWords: 15\nCharacters: 75 (61 without spaces)\nLetters: 48\nLines: 1"
+  },
+  "The price is $3.50 per kg - not bad, right? Compare it with 4.25 elsewhere.\nHow many words is that?": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "The price is $3.50 per kg - not bad, right? Compare it with 4.25 elsewhere.",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": null,
+   "d": null
+  },
+  "Count the words in: Pros & cons: speed, cost, and ease (in that order).": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "Pros & cons: speed, cost, and ease (in that order).",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": {
+    "input": {
+     "text": "Pros & cons: speed, cost, and ease (in that order).",
+     "unit": "words"
+    }
+   },
+   "d": "That text has 10 words.\n\nWords: 10\nCharacters: 51 (42 without spaces)\nLetters: 35\nLines: 1"
+  },
+  "Pros & cons: speed, cost, and ease (in that order).\nHow many words is that?": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "Pros & cons: speed, cost, and ease (in that order).",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": null,
+   "d": null
+  },
+  "Count the words in: She said: \"Wait here.\" Then she left... and he waited.": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "Wait here.",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": {
+    "input": {
+     "text": "She said: \"Wait here.\" Then she left... and he waited.",
+     "unit": "words"
+    }
+   },
+   "d": "That text has 10 words.\n\nWords: 10\nCharacters: 54 (45 without spaces)\nLetters: 37\nLines: 1"
+  },
+  "She said: \"Wait here.\" Then she left... and he waited.\nHow many words is that?": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "Wait here.",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": null,
+   "d": null
+  },
+  "Count the words in: Visit https://example.com/docs or email me at anna@example.org for details.": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "Visit https://example.com/docs or email me at anna@example.org for details.",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": {
+    "input": {
+     "text": "Visit https://example.com/docs or email me at anna@example.org for details.",
+     "unit": "words"
+    }
+   },
+   "d": "That text has 9 words.\n\nWords: 9\nCharacters: 75 (67 without spaces)\nLetters: 59\nLines: 1"
+  },
+  "Visit https://example.com/docs or email me at anna@example.org for details.\nHow many words is that?": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "Visit https://example.com/docs or email me at anna@example.org for details.",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": null,
+   "d": null
+  },
+  "Count the words in: E.g. use A/B testing; i.e. compare two versions. Is 2 + 2 = 4? Yes!": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "E.g. use A/B testing; i.e. compare two versions. Is 2 + 2 = 4? Yes!",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": {
+    "input": {
+     "text": "E.g. use A/B testing; i.e. compare two versions. Is 2 + 2 = 4? Yes!",
+     "unit": "words"
+    }
+   },
+   "d": "That text has 15 words.\n\nWords: 15\nCharacters: 67 (53 without spaces)\nLetters: 39\nLines: 1"
+  },
+  "E.g. use A/B testing; i.e. compare two versions. Is 2 + 2 = 4? Yes!\nHow many words is that?": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "E.g. use A/B testing; i.e. compare two versions. Is 2 + 2 = 4? Yes!",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": null,
+   "d": null
+  },
+  "Count the words in: Shopping list:\n- milk\n- eggs\n- bread": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "Shopping list:\n- milk\n- eggs\n- bread",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": {
+    "input": {
+     "text": "Shopping list:\n- milk\n- eggs\n- bread",
+     "unit": "words"
+    }
+   },
+   "d": "That text has 8 words.\n\nWords: 8\nCharacters: 36 (29 without spaces)\nLetters: 25\nLines: 4"
+  },
+  "Shopping list:\n- milk\n- eggs\n- bread\nHow many words is that?": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "Shopping list:\n- milk\n- eggs\n- bread",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": null,
+   "d": null
+  },
+  "Count the words in: Dear all,\n\n    Please find the notes below.\n    Thanks,\n    Sam": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "Dear all,\n\n    Please find the notes below.\n    Thanks,\n    Sam",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": {
+    "input": {
+     "text": "Dear all,\n\n    Please find the notes below.\n    Thanks,\n    Sam",
+     "unit": "words"
+    }
+   },
+   "d": "That text has 9 words.\n\nWords: 9\nCharacters: 63 (42 without spaces)\nLetters: 39\nLines: 5"
+  },
+  "Dear all,\n\n    Please find the notes below.\n    Thanks,\n    Sam\nHow many words is that?": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "Dear all,\n\n    Please find the notes below.\n    Thanks,\n    Sam",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": null,
+   "d": null
+  },
+  "Count the words in: Use the word 'run' in a sentence: I run every day.": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "run",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": {
+    "input": {
+     "text": "Use the word 'run' in a sentence: I run every day.",
+     "unit": "words"
+    }
+   },
+   "d": "That text has 11 words.\n\nWords: 11\nCharacters: 50 (40 without spaces)\nLetters: 36\nLines: 1"
+  },
+  "Use the word 'run' in a sentence: I run every day.\nHow many words is that?": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "run",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": null,
+   "d": null
+  },
+  "count the words in: the quick brown fox": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "the quick brown fox",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": {
+    "input": {
+     "text": "the quick brown fox",
+     "unit": "words"
+    }
+   },
+   "d": "That text has 4 words.\n\nWords: 4\nCharacters: 19 (16 without spaces)\nLetters: 16\nLines: 1"
+  },
+  "how many characters in \"hello there\"": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "hello there",
+     "unit": "characters"
+    },
+    "summary": "count the characters in the text you gave"
+   },
+   "mt": {
+    "input": {
+     "text": "hello there",
+     "unit": "characters"
+    }
+   },
+   "d": "That text has 11 characters (10 without spaces).\n\nWords: 2\nCharacters: 11 (10 without spaces)\nLetters: 10\nLines: 1"
+  },
+  "count lines in this: a\nb\nc": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "a\nb\nc",
+     "unit": "lines"
+    },
+    "summary": "count the lines in the text you gave"
+   },
+   "mt": {
+    "input": {
+     "text": "this: a\nb\nc",
+     "unit": "lines"
+    }
+   },
+   "d": "That text has 3 lines.\n\nWords: 4\nCharacters: 11 (8 without spaces)\nLetters: 7\nLines: 3"
+  },
+  "how many letters are in banana?": {
+   "u": {
+    "score": 0.75,
+    "input": {
+     "unit": "letters"
+    },
+    "ask": {
+     "field": "text",
+     "question": "What text should I count? Paste or type it and send it. (Say \"cancel\" to stop.)"
+    },
+    "summary": "count the letters in some text"
+   },
+   "mt": {
+    "input": {
+     "text": "banana?",
+     "unit": "letters"
+    }
+   },
+   "d": "That text has 6 letters.\n\nWords: 1\nCharacters: 7 (7 without spaces)\nLetters: 6\nLines: 1"
+  },
+  "tally the words": {
+   "u": {
+    "score": 0.75,
+    "input": {
+     "unit": "words"
+    },
+    "ask": {
+     "field": "text",
+     "question": "What text should I count? Paste or type it and send it. (Say \"cancel\" to stop.)"
+    },
+    "summary": "count the words in some text"
+   },
+   "mt": null,
+   "d": null
+  },
+  "this is my text: one two three. count the words.": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "this is my text: one two three.",
+     "unit": "words"
+    },
+    "summary": "count the words in the text you gave"
+   },
+   "mt": null,
+   "d": null
+  },
+  "how many lines in a sonnet?": {
+   "u": {
+    "score": 0.75,
+    "input": {
+     "unit": "lines"
+    },
+    "ask": {
+     "field": "text",
+     "question": "What text should I count? Paste or type it and send it. (Say \"cancel\" to stop.)"
+    },
+    "summary": "count the lines in some text"
+   },
+   "mt": {
+    "input": {
+     "text": "a sonnet?",
+     "unit": "lines"
+    }
+   },
+   "d": "That text has 1 line.\n\nWords: 2\nCharacters: 9 (8 without spaces)\nLetters: 7\nLines: 1"
+  },
+  "count the words in the following:": {
+   "u": {
+    "score": 0.75,
+    "input": {
+     "unit": "words"
+    },
+    "ask": {
+     "field": "text",
+     "question": "What text should I count? Paste or type it and send it. (Say \"cancel\" to stop.)"
+    },
+    "summary": "count the words in some text"
+   },
+   "mt": {
+    "input": {
+     "unit": "words"
+    },
+    "ask": {
+     "field": "text",
+     "question": "What text should I count? Paste or type it and send it. (Say \"cancel\" to stop.)"
+    }
+   },
+   "d": null
+  },
+  "what is the weather": {
+   "u": null,
+   "mt": null,
+   "d": null
+  },
+  "please count the characters of 'abc def'": {
+   "u": {
+    "score": 1,
+    "input": {
+     "text": "abc def",
+     "unit": "characters"
+    },
+    "summary": "count the characters in the text you gave"
+   },
+   "mt": {
+    "input": {
+     "text": "abc def",
+     "unit": "characters"
+    }
+   },
+   "d": "That text has 7 characters (6 without spaces).\n\nWords: 2\nCharacters: 7 (6 without spaces)\nLetters: 6\nLines: 1"
+  }
+ }
+}

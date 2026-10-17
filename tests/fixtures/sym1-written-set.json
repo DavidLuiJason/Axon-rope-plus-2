@@ -1,0 +1,526 @@
+{
+ "version": 1,
+ "note": "Written by the Director before any code (N6 rule). Region strings are exact substrings of text. Marks are listed in reading order; a mark is one punctuation character, or one whole token for decimal numbers, web addresses and email addresses. Samples marked passThrough have no counting words of their own, so the message 'Count the words in this: ' + text must give exactly text back as the text to count.",
+ "roles": [
+  "end_statement",
+  "end_question",
+  "end_exclaim",
+  "pause",
+  "clause_break",
+  "introduces",
+  "quote_open",
+  "quote_close",
+  "bracket_open",
+  "bracket_close",
+  "apostrophe",
+  "decimal",
+  "abbreviation",
+  "hyphen_in_word",
+  "dash_break",
+  "ellipsis",
+  "address",
+  "alternative",
+  "joiner"
+ ],
+ "codeSamples": [
+  {
+   "id": "C01",
+   "text": "Here is my code:\n```js\nconst total = items.reduce((a, b) => a + b, 0);\nconsole.log(total);\n```\nCount the words in it.",
+   "regions": [
+    "```js\nconst total = items.reduce((a, b) => a + b, 0);\nconsole.log(total);\n```"
+   ]
+  },
+  {
+   "id": "C02",
+   "text": "Please count the lines: ```python\ndef add(a, b):\n    return a + b",
+   "regions": [
+    "```python\ndef add(a, b):\n    return a + b"
+   ]
+  },
+  {
+   "id": "C03",
+   "text": "This function doubles a number:\n\n    def double(n):\n        return n * 2\n\nThen count the words.",
+   "regions": [
+    "    def double(n):\n        return n * 2"
+   ]
+  },
+  {
+   "id": "C04",
+   "text": "Use the `git status` command first.",
+   "regions": [
+    "`git status`"
+   ],
+   "passThrough": true
+  },
+  {
+   "id": "C05",
+   "text": "for (let i = 0; i < 10; i++) { total += arr[i] * 2; }",
+   "regions": [
+    "for (let i = 0; i < 10; i++) { total += arr[i] * 2; }"
+   ],
+   "passThrough": true
+  },
+  {
+   "id": "C06",
+   "text": "{\"name\": \"Axon\", \"tags\": [\"a\", \"b\"], \"size\": 3}",
+   "regions": [
+    "{\"name\": \"Axon\", \"tags\": [\"a\", \"b\"], \"size\": 3}"
+   ],
+   "passThrough": true
+  },
+  {
+   "id": "C07",
+   "text": "<div class=\"box\"><p>Hello</p></div>",
+   "regions": [
+    "<div class=\"box\"><p>Hello</p></div>"
+   ],
+   "passThrough": true
+  },
+  {
+   "id": "C08",
+   "text": "SELECT name, COUNT(*) FROM words WHERE len > 3 GROUP BY name;",
+   "regions": [
+    "SELECT name, COUNT(*) FROM words WHERE len > 3 GROUP BY name;"
+   ],
+   "passThrough": true
+  },
+  {
+   "id": "C09",
+   "text": "rm -rf ./build && npm run build | tee out.log",
+   "regions": [
+    "rm -rf ./build && npm run build | tee out.log"
+   ],
+   "passThrough": true
+  },
+  {
+   "id": "C10",
+   "text": "const re = /^[a-z0-9_-]{3,16}$/;",
+   "regions": [
+    "const re = /^[a-z0-9_-]{3,16}$/;"
+   ],
+   "passThrough": true
+  },
+  {
+   "id": "C11",
+   "text": "My loop is broken:\nwhile (x < 5) { x++; }\nWhat should I count?",
+   "regions": [
+    "while (x < 5) { x++; }"
+   ]
+  },
+  {
+   "id": "C12",
+   "text": "First `a = b + c` and then:\n```\nx = [1, 2, 3]\nprint(x[0])\n```",
+   "regions": [
+    "`a = b + c`",
+    "```\nx = [1, 2, 3]\nprint(x[0])\n```"
+   ],
+   "passThrough": true
+  },
+  {
+   "id": "C13",
+   "text": "body { margin: 0; padding: 0; }",
+   "regions": [
+    "body { margin: 0; padding: 0; }"
+   ],
+   "passThrough": true
+  },
+  {
+   "id": "C14",
+   "text": "print(\"Hello, world!\")",
+   "regions": [
+    "print(\"Hello, world!\")"
+   ],
+   "passThrough": true
+  }
+ ],
+ "ordinarySamples": [
+  {
+   "id": "N01",
+   "text": "I can't believe it's already 5:30 (time flies!), but \"better late than never\" is what they say.",
+   "regions": [],
+   "unsure": false
+  },
+  {
+   "id": "N02",
+   "text": "Dear John, thank you for your letter; I'll reply on Monday. Regards, Anna",
+   "regions": [],
+   "unsure": false
+  },
+  {
+   "id": "N03",
+   "text": "The price is $3.50 per kg - not bad, right? Compare it with 4.25 elsewhere.",
+   "regions": [],
+   "unsure": false
+  },
+  {
+   "id": "N04",
+   "text": "Pros & cons: speed, cost, and ease (in that order).",
+   "regions": [],
+   "unsure": false
+  },
+  {
+   "id": "N05",
+   "text": "She said: \"Wait here.\" Then she left... and he waited.",
+   "regions": [],
+   "unsure": false
+  },
+  {
+   "id": "N06",
+   "text": "Visit https://example.com/docs or email me at anna@example.org for details.",
+   "regions": [],
+   "unsure": false
+  },
+  {
+   "id": "N07",
+   "text": "E.g. use A/B testing; i.e. compare two versions. Is 2 + 2 = 4? Yes!",
+   "regions": [],
+   "unsure": false
+  },
+  {
+   "id": "N08",
+   "text": "Shopping list:\n- milk\n- eggs\n- bread",
+   "regions": [],
+   "unsure": false
+  },
+  {
+   "id": "N09",
+   "text": "Dear all,\n\n    Please find the notes below.\n    Thanks,\n    Sam",
+   "regions": [],
+   "unsure": true
+  },
+  {
+   "id": "N10",
+   "text": "Use the word 'run' in a sentence: I run every day.",
+   "regions": [],
+   "unsure": false
+  }
+ ],
+ "punctuationSamples": [
+  {
+   "id": "P01",
+   "text": "Hello, world.",
+   "marks": [
+    [
+     ",",
+     "pause"
+    ],
+    [
+     ".",
+     "end_statement"
+    ]
+   ]
+  },
+  {
+   "id": "P02",
+   "text": "Is it ready?",
+   "marks": [
+    [
+     "?",
+     "end_question"
+    ]
+   ]
+  },
+  {
+   "id": "P03",
+   "text": "Stop!",
+   "marks": [
+    [
+     "!",
+     "end_exclaim"
+    ]
+   ]
+  },
+  {
+   "id": "P04",
+   "text": "Wait... what?",
+   "marks": [
+    [
+     "...",
+     "ellipsis"
+    ],
+    [
+     "?",
+     "end_question"
+    ]
+   ]
+  },
+  {
+   "id": "P05",
+   "text": "Buy milk; call Sam.",
+   "marks": [
+    [
+     ";",
+     "clause_break"
+    ],
+    [
+     ".",
+     "end_statement"
+    ]
+   ]
+  },
+  {
+   "id": "P06",
+   "text": "Note: bring water.",
+   "marks": [
+    [
+     ":",
+     "introduces"
+    ],
+    [
+     ".",
+     "end_statement"
+    ]
+   ]
+  },
+  {
+   "id": "P07",
+   "text": "She said \"hello\" twice.",
+   "marks": [
+    [
+     "\"",
+     "quote_open"
+    ],
+    [
+     "\"",
+     "quote_close"
+    ],
+    [
+     ".",
+     "end_statement"
+    ]
+   ]
+  },
+  {
+   "id": "P08",
+   "text": "It costs 3.50 today.",
+   "marks": [
+    [
+     "3.50",
+     "decimal"
+    ],
+    [
+     ".",
+     "end_statement"
+    ]
+   ]
+  },
+  {
+   "id": "P09",
+   "text": "Dr. Smith arrived.",
+   "marks": [
+    [
+     ".",
+     "abbreviation"
+    ],
+    [
+     ".",
+     "end_statement"
+    ]
+   ]
+  },
+  {
+   "id": "P10",
+   "text": "Don't go.",
+   "marks": [
+    [
+     "'",
+     "apostrophe"
+    ],
+    [
+     ".",
+     "end_statement"
+    ]
+   ]
+  },
+  {
+   "id": "P11",
+   "text": "A well-known fact.",
+   "marks": [
+    [
+     "-",
+     "hyphen_in_word"
+    ],
+    [
+     ".",
+     "end_statement"
+    ]
+   ]
+  },
+  {
+   "id": "P12",
+   "text": "See (page 4) now.",
+   "marks": [
+    [
+     "(",
+     "bracket_open"
+    ],
+    [
+     ")",
+     "bracket_close"
+    ],
+    [
+     ".",
+     "end_statement"
+    ]
+   ]
+  },
+  {
+   "id": "P13",
+   "text": "Ana, Ben, and Cy came.",
+   "marks": [
+    [
+     ",",
+     "pause"
+    ],
+    [
+     ",",
+     "pause"
+    ],
+    [
+     ".",
+     "end_statement"
+    ]
+   ]
+  },
+  {
+   "id": "P14",
+   "text": "Mail anna@example.org now.",
+   "marks": [
+    [
+     "anna@example.org",
+     "address"
+    ],
+    [
+     ".",
+     "end_statement"
+    ]
+   ]
+  },
+  {
+   "id": "P15",
+   "text": "Go to https://example.com/docs now.",
+   "marks": [
+    [
+     "https://example.com/docs",
+     "address"
+    ],
+    [
+     ".",
+     "end_statement"
+    ]
+   ]
+  },
+  {
+   "id": "P16",
+   "text": "Wait, what? No. Yes!",
+   "marks": [
+    [
+     ",",
+     "pause"
+    ],
+    [
+     "?",
+     "end_question"
+    ],
+    [
+     ".",
+     "end_statement"
+    ],
+    [
+     "!",
+     "end_exclaim"
+    ]
+   ]
+  },
+  {
+   "id": "P17",
+   "text": "He asked, \"Why?\" and left.",
+   "marks": [
+    [
+     ",",
+     "pause"
+    ],
+    [
+     "\"",
+     "quote_open"
+    ],
+    [
+     "?",
+     "end_question"
+    ],
+    [
+     "\"",
+     "quote_close"
+    ],
+    [
+     ".",
+     "end_statement"
+    ]
+   ]
+  },
+  {
+   "id": "P18",
+   "text": "Yes/no questions are common.",
+   "marks": [
+    [
+     "/",
+     "alternative"
+    ],
+    [
+     ".",
+     "end_statement"
+    ]
+   ]
+  },
+  {
+   "id": "P19",
+   "text": "Tom & Jerry ran.",
+   "marks": [
+    [
+     "&",
+     "joiner"
+    ],
+    [
+     ".",
+     "end_statement"
+    ]
+   ]
+  },
+  {
+   "id": "P20",
+   "text": "Wow - that is big.",
+   "marks": [
+    [
+     "-",
+     "dash_break"
+    ],
+    [
+     ".",
+     "end_statement"
+    ]
+   ]
+  },
+  {
+   "id": "P21",
+   "text": "Items: apples, pears; plums.",
+   "marks": [
+    [
+     ":",
+     "introduces"
+    ],
+    [
+     ",",
+     "pause"
+    ],
+    [
+     ";",
+     "clause_break"
+    ],
+    [
+     ".",
+     "end_statement"
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+export { findReplace, FIND_REPLACE_LIMITS, FIND_REPLACE_TYPES } from './findReplace';
+export type { FindReplaceOptions, FindReplaceResult, MatchPosition } from './findReplace';
+export { caseConvert, CASE_CONVERT_MODES, CASE_CONVERT_LIMITS, CASE_CONVERT_TYPES } from './caseConvert';
+export type { CaseConvertMode, CaseConvertResult } from './caseConvert';
+export { textCleaner, TEXT_CLEANER_LIMITS, TEXT_CLEANER_TYPES } from './textCleaner';
+export type { TextCleanerOptions, TextCleanerCounts, TextCleanerResult } from './textCleaner';
+export { sortLines, SORT_LINE_MODES, SORT_LINES_LIMITS, SORT_LINES_TYPES } from './sortLines';
+export type { SortLineMode, SortLinesOptions, SortLinesResult, RandomFunction } from './sortLines';
+export { textCompare, TEXT_COMPARE_MODES, TEXT_COMPARE_LIMITS, TEXT_COMPARE_TYPES } from './textCompare';
+export type { TextCompareMode, TextDiffType, TextDiffPart, TextCompareCounts, TextCompareResult } from './textCompare';

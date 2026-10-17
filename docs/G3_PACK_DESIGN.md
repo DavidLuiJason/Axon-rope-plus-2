@@ -1,0 +1,11 @@
+# G3 lossless searchable dictionary — measured candidate, not installed
+
+The supplied dictionary remains untouched at `public/dictionary/en`. The candidate converter is `tools/pack_dictionary.py`, its byte-for-byte verifier is `tools/verify_pack_dictionary.py`, and its unconnected browser reader is `src/brain/dictionary/packReader.ts`. The production app still uses its original shard reader.
+
+**Local measurement (2026-10-12):** 3,340 independently compressed `core/` and `rel/` shard members fit into **58 ZIP files**. Including index, forms, attribution, licences, manifests and the pack index, the candidate has **65 physical files** occupying **16,654,080 bytes**. Every original shard was compared byte-for-byte against the packed member and SHA-256; all three licence/credit files were also byte-identical. No meanings, forms or relationships were omitted. These are local data tests, **not** a Vite build, Android performance test or AI Studio push test.
+
+A word lookup first maps its shard path to one pack through `packs/index.json`, downloads that pack only, checks the pack's SHA-256, and opens only the named ZIP member. The candidate reader caches up to three packs. This uses the already-declared JSZip dependency and does not require HTTP byte-range support.
+
+**Disadvantages:** each lookup may download a complete pack of several hundred KB; decompressing a member costs CPU; an extra index is needed; the reader depends on JSZip and WebCrypto; cache eviction can cause another pack download. On older Android WebViews and weak phones, memory and latency still need measurement. The packed manifest is version 2, so `Dictionary.open`, tests and the guard must be migrated together before replacing the shard files. The owner must approve the candidate after G3c/G3d evidence. Never delete the original data before that proof.
+
+**Next G3 steps:** adapt `Dictionary.open` to read `logicalFiles` for per-shard checks and use the packed reader; run full dictionary tests and compare every lookup; run Vite build memory/file-count measurements on the target build machine; install on the phone and check dictionary search from Settings and main chat. Then update the guard lock deliberately and switch the source data only once all proofs pass.

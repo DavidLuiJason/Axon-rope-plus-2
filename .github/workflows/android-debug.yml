@@ -1,0 +1,162 @@
+name: Android Debug APK
+on:
+  workflow_dispatch:
+  push:
+    branches: ['**']
+    paths-ignore: ['*.zip']
+permissions:
+  contents: write
+concurrency:
+  group: axon-build-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  build-debug-apk:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up pinned Node from .nvmrc
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: File guard (blocking)
+        run: node tools/guard.mjs --strict
+      - name: Install reproducible dependencies
+        run: |
+          set -euo pipefail
+          if [ -f package-lock.json ]; then npm ci --no-audit --no-fund
+          else npm install --no-audit --no-fund; fi
+      - name: Ratchet new files BEFORE the snapshot (commit only after success)
+        run: node tools/guard.mjs --ratchet
+      - name: Web build (includes full source snapshot and dictionary)
+        id: webbuild
+        run: npm run build
+      - name: Verify snapshot and all Z2 dictionary hashes (blocking)
+        run: npm run test:snapshot
+      - name: Verify Z1 archive matches the project (blocking)
+        run: node tools/compare-dirs.mjs . public/_axon-source/source.zip --ignore public/dictionary/
+      - name: Foundation regression tests (blocking)
+        run: npm run test:foundation
+      - name: Type check
+        id: typecheck
+        continue-on-error: ${{ vars.AXON_GATE != 'on' }}
+        run: npm run lint
+      - name: Background tests
+        id: tests
+        continue-on-error: ${{ vars.AXON_GATE != 'on' }}
+        run: npm run test:bg
+      - name: Kernel tests
+        id: kerneltests
+        continue-on-error: ${{ vars.AXON_GATE != 'on' }}
+        run: npm run test:kernel
+      - name: Chat session tests
+        id: chattests
+        continue-on-error: ${{ vars.AXON_GATE != 'on' }}
+        run: npm run test:chat
+      - name: Add Android platform
+        run: npx cap add android
+      - name: Apply AXON Android overlay
+        run: bash scripts/apply-android-overlay.sh
+      - name: Sync web build into Android project
+        run: npx cap sync android
+      - name: Set stable signing key when secret is configured
+        env:
+          AXON_DEBUG_KEYSTORE_B64: ${{ secrets.AXON_DEBUG_KEYSTORE_B64 }}
+        run: |
+          mkdir -p "$HOME/.android"
+          if [ -n "$AXON_DEBUG_KEYSTORE_B64" ]; then
+            printf '%s' "$AXON_DEBUG_KEYSTORE_B64" | base64 --decode > "$HOME/.android/debug.keystore"
+            chmod 600 "$HOME/.android/debug.keystore"
+            keytool -list -keystore "$HOME/.android/debug.keystore" -storepass android -alias androiddebugkey >/dev/null
+            echo 'Stable signing key configured (never printed).'
+          else
+            echo '::warning::AXON_DEBUG_KEYSTORE_B64 missing. This APK uses an ephemeral debug key; updates may require uninstalling.'
+          fi
+      - name: Set increasing Android versionCode
+        env:
+          AXON_BUILD_NUMBER: ${{ github.run_number }}
+        run: |
+          python3 - <<'PY'
+          import os, re
+          from pathlib import Path
+          p = Path('android/app/build.gradle')
+          text = p.read_text()
+          new, n = re.subn(r'\bversionCode\s+\d+\b', 'versionCode ' + os.environ['AXON_BUILD_NUMBER'], text, count=1)
+          if n != 1: raise SystemExit('versionCode not found: refusing unsafe update build')
+          p.write_text(new)
+          print('Android versionCode:', os.environ['AXON_BUILD_NUMBER'])
+          PY
+      - name: Assemble debug APK
+        id: apk
+        working-directory: android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon --stacktrace
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: axon-debug-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+      - name: Publish plain APK as a prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="apk-${GITHUB_RUN_NUMBER}"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release upload "$tag" android/app/build/outputs/apk/debug/app-debug.apk --clobber
+          else
+            gh release create "$tag" android/app/build/outputs/apk/debug/app-debug.apk \
+              --title "AXON debug $tag" --notes "Debug-only build. Use the same signing key for updates." \
+              --prerelease --target "${{ github.sha }}"
+          fi
+      - name: Commit lockfile and growing guard after successful build
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          git config user.name axon-build
+          git config user.email axon-build@users.noreply.github.com
+          git add tools/files.lock package-lock.json
+          if git diff --cached --quiet; then echo 'Nothing to commit.'; exit 0; fi
+          mkdir -p /tmp/axon-keep
+          cp package-lock.json /tmp/axon-keep/package-lock.json
+          for attempt in 1 2 3 4; do
+            if [ "$attempt" -gt 1 ]; then
+              git fetch origin "$BRANCH"
+              git reset --hard "origin/$BRANCH"
+              cp /tmp/axon-keep/package-lock.json package-lock.json
+              node tools/guard.mjs --ratchet
+              git add tools/files.lock package-lock.json
+            fi
+            if git diff --cached --quiet; then echo 'Remote already holds these files.'; exit 0; fi
+            git commit -q -m 'Build: pin dependencies and ratchet files'
+            if git push origin "HEAD:$BRANCH"; then echo 'Lock files saved.'; exit 0; fi
+            echo "Push rejected (attempt $attempt): the branch moved. Retrying on top of the newest commit."
+            sleep $((attempt * 5))
+          done
+          echo '::error::Could not save the lock files after 4 attempts. The APK and Release are already published.'
+          exit 1
+      - name: Build summary
+        if: always()
+        run: |
+          {
+            echo '## AXON build summary'
+            echo "- Node: $(node -v) / npm $(npm -v)"
+            echo "- Lock SHA-256: $(test -f package-lock.json && sha256sum package-lock.json | cut -d' ' -f1 || echo missing)"
+            echo "- Memory: $(free -m | sed -n '2p')"
+            echo "- Source files: $(test -f public/_axon-source/manifest.json && node -e 'let m=require("./public/_axon-source/manifest.json");console.log(m.files.length+" (Z1 "+m.zones.Z1.files+", Z2 "+m.zones.Z2.files+")")' || echo unavailable)"
+            echo '- Web build: ${{ steps.webbuild.outcome }}'
+            echo '- Type check: ${{ steps.typecheck.outcome }}'
+            echo '- Background tests: ${{ steps.tests.outcome }}'
+            echo '- Kernel tests: ${{ steps.kerneltests.outcome }}'
+            echo '- Chat session tests: ${{ steps.chattests.outcome }}'
+            echo '- APK: ${{ steps.apk.outcome }}'
+            echo '- Test gate: ${{ vars.AXON_GATE || 'off' }}'
+          } >> "$GITHUB_STEP_SUMMARY"

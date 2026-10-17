@@ -1,0 +1,36 @@
+name: Unpack a zip into the repository
+on:
+  workflow_dispatch:
+    inputs:
+      zip_file:
+        description: 'Path of the zip file in this repository, for example uploads/project.zip'
+        required: true
+      target_dir:
+        description: 'Folder to unpack into: a dot for the top level, or for example public/dictionary'
+        required: true
+        default: '.'
+permissions:
+  contents: write
+jobs:
+  unpack:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unpack, count and commit
+        env:
+          ZIP_FILE: ${{ inputs.zip_file }}
+          TARGET_DIR: ${{ inputs.target_dir }}
+        run: |
+          set -euo pipefail
+          test -f "$ZIP_FILE"
+          mkdir -p "$TARGET_DIR"
+          unzip -q -o "$ZIP_FILE" -d "$TARGET_DIR" -x ".github/workflows/*"
+          rm -f "$ZIP_FILE"
+          echo "Workflow files are never unpacked here: GitHub does not allow it with the automatic token. Add them by hand."
+          echo "Files now in the repository (not counting .git):"
+          find . -path ./.git -prune -o -type f -print | wc -l
+          git config user.name "unpack-bot"
+          git config user.email "unpack-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Unpack $ZIP_FILE into $TARGET_DIR"
+          git push
